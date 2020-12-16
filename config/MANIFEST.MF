@@ -1,0 +1,6 @@
+Manifest-Version: 1.0 
+Main-Class: com.buct.main.GUI
+Class-Path: lib/demo.jar lib/javabuilder.jar 
+ lib/javax.servlet-api-3.1.0.jar lib/jgoodies-forms-1.8.0.jar lib/jmatio.jar 
+ lib/matlabcontrol-4.1.0.jar lib/miglayout15-swing.jar lib/ujmp-complete-0.3.0.jar 
+Created-By: duyuhang
