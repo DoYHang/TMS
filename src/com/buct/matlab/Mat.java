@@ -17,7 +17,7 @@ public class Mat {
 	public static void iga(MatlabProxyFactory factory,MatlabProxy proxy,int n,int s,
 			int l,int r,int t,double a,double b,int ps,int g,double p_c,double p_m,String filename) throws MatlabConnectionException, MatlabInvocationException {
 		
-		Object[] result = proxy.returningFeval("IGA",2,n,s,l,r,t,a,b,ps,g,p_c,p_m,filename);
+		Object[] result = proxy.returningFeval("IGA",7,n,s,l,r,t,a,b,ps,g,p_c,p_m,filename);
 //		String solution = String.valueOf(result[0]);	
 //		System.out.println(solution);
 //		String objective =  String.valueOf(result[1]);

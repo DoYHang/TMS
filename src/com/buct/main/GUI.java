@@ -73,8 +73,21 @@ public class GUI {
 	private String resultBusPassangerTime = "./config/busPassangerTime.jpg";
 	private String busTimeissus1 = "./config/bus_issues1.png";
 	private String busTimeissus2 = "./config/bus_issues2.png";
+	private String youhaozhanshi = "./config/youhaoissue1.png";
 	private String dancheResult = "./tour_FFBS.jpg";
 	private String dancheResult1 = "./config/danche.jpg";
+	private String dancheissueimage1 = "./config/dancheissue1.png";
+	private String dancheissueimage2 = "./config/dancheissue2.png";
+	private String danchezhanshiImage = "./config/danchezhanshi.jpg";
+	private String chuanchezhanshiImage = "./config/chuancheshouye.jpg";
+	private String chuancheResult = "./ShortTurning_Figure.png";
+	private String chuancheResult1 = "./config/chuancheresult.jpg";
+	private String chuancheissueImage1 = "./config/chuancheissue1.png";
+	private String shuangxiangshouye = "./config/shuangxiangyouhuazhanshi.jpg";
+	private String shuangxiangissueImage1 = "./config/shuangxiangissue1.png";
+	private String shuangxiangissueImage2 = "";
+	private String shuangxiangResult1 = "./Bidirection_MaxPassenger_Figure.png";
+	private String shuangxiangResult2 = "./config/shuangxiang.jpg";
 	
 	public static MatlabProxyFactory factory = new MatlabProxyFactory();
 	
@@ -141,6 +154,35 @@ public class GUI {
 	private String danchedistance;
 	private ImageIcon dancheresultImage;
 	private JLabel danchezhanshi;
+	private JTextField uniform_Objective1;
+	private JTextField uniform_use_rate;
+	private JTextField chuanchezongtangci;
+	private JTextField chuanchequjiantangci;
+	private JTextField chuanchewaite1;
+	private JTextField chuanchewaite2;
+	private JLabel chuanchezhanshilabel;
+	private ImageIcon chuancheresultImage;
+	private String chuanchejihuashijian;
+	private String chuancheshijishijian;
+	private String chuanchechengkedaodalv;
+	private JTextField shuangxiangtangci;
+	private JTextField shangxingshouban;
+	private JTextField shangxingmoban;
+	private JTextField xiaxingshouban;
+	private JTextField xiaxingmoban;
+	private JTextField shuangxiangzuixiao;
+	private JTextField shuangxiangzuida;
+	private JTextField shuangxiangzhongqun;
+	private JTextField shuangxiangjiaocha;
+	private JTextField shuangxiangbianyi;
+	private JTextField shuangxiangdiedai;
+	private JTextField shuangxiangkeliu;
+	private JTextField shangxingpeiche;
+	private JTextField xiaxingpeiche;
+	private JLabel shuangxiangzhanshi;
+	private ImageIcon shuangxiangresultImage;
+	private String shuangxiangODFile;
+	private String shuangxiangzhanjianFile;
 	/**
 	 * Launch the application.
 	 */
@@ -411,22 +453,22 @@ public class GUI {
 		JPanel panel_image = new JPanel();
 		GroupLayout gl_panel1112 = new GroupLayout(panel1112);
 		gl_panel1112.setHorizontalGroup(
-			gl_panel1112.createParallelGroup(Alignment.LEADING)
+			gl_panel1112.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_panel1112.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_panel1112.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel1112.createSequentialGroup()
-							.addGap(44)
-							.addComponent(buttonOpenLocalText)
-							.addGap(32)
-							.addComponent(button, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
-							.addGap(50)
-							.addComponent(cleanbutton))
-						.addComponent(panel, GroupLayout.PREFERRED_SIZE, 489, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap(137, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_panel1112.createSequentialGroup()
+					.addGap(54)
+					.addComponent(buttonOpenLocalText)
+					.addGap(32)
+					.addComponent(button, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
+					.addGap(50)
+					.addComponent(cleanbutton)
+					.addContainerGap(241, Short.MAX_VALUE))
+				.addGroup(gl_panel1112.createSequentialGroup()
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addComponent(panel_image, GroupLayout.PREFERRED_SIZE, 650, GroupLayout.PREFERRED_SIZE))
+				.addGroup(Alignment.LEADING, gl_panel1112.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 609, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(41, Short.MAX_VALUE))
 		);
 		gl_panel1112.setVerticalGroup(
 			gl_panel1112.createParallelGroup(Alignment.LEADING)
@@ -450,44 +492,59 @@ public class GUI {
 		GroupLayout gl_panel_image = new GroupLayout(panel_image);
 		gl_panel_image.setHorizontalGroup(
 			gl_panel_image.createParallelGroup(Alignment.TRAILING)
-				.addComponent(lblResultlabel, GroupLayout.PREFERRED_SIZE, 626, Short.MAX_VALUE)
+				.addGroup(gl_panel_image.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(lblResultlabel, GroupLayout.PREFERRED_SIZE, 650, Short.MAX_VALUE))
 		);
 		gl_panel_image.setVerticalGroup(
 			gl_panel_image.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel_image.createSequentialGroup()
-					.addContainerGap()
 					.addComponent(lblResultlabel, GroupLayout.PREFERRED_SIZE, 365, Short.MAX_VALUE)
-					.addContainerGap())
+					.addGap(20))
 		);
 		panel_image.setLayout(gl_panel_image);
-		JLabel lblobjective1 = new JLabel("吸收能量：");
+		JLabel lblobjective1 = new JLabel("牵引能量：");
 		
-		JLabel lblobjective3 = new JLabel("再生能量：");
+		JLabel lblobjective3 = new JLabel("吸收能量：");
 		
-		JLabel lblobjective2 = new JLabel("牵引能量：");
+		JLabel lblobjective2 = new JLabel("再生能量：");
 		
 		JLabel lblUserate = new JLabel("再生能量利用率：");
 		
-		objective1 = new JTextField();
-		objective1.setColumns(10);
+		user_rate = new JTextField();
+		user_rate.setColumns(10);
+		panel.setLayout(new MigLayout("", "[100px][100px,grow][100px][100px,grow]", "[100px][100px][100px]"));
+		panel.add(lblobjective1, "cell 0 0,alignx center,aligny center");
 		
 		objective3 = new JTextField();
 		objective3.setColumns(10);
-		
-		objective2 = new JTextField();
-		objective2.setColumns(10);
-		
-		user_rate = new JTextField();
-		user_rate.setColumns(10);
-		panel.setLayout(new MigLayout("", "[100px][100px][100px][100px]", "[100px][100px]"));
-		panel.add(lblobjective1, "cell 0 0,alignx center,aligny center");
+		panel.add(objective3, "cell 3 0,alignx left,aligny center");
 		panel.add(lblobjective3, "cell 0 1,alignx center,aligny center");
 		panel.add(lblobjective2, "cell 2 0,alignx center,aligny center");
 		panel.add(lblUserate, "cell 2 1,alignx center,aligny center");
-		panel.add(objective1, "cell 1 0,alignx left,aligny center");
-		panel.add(objective3, "cell 1 1,alignx left,aligny center");
-		panel.add(objective2, "cell 3 0,alignx left,aligny center");
 		panel.add(user_rate, "cell 3 1,alignx left,aligny center");
+		
+		JLabel label_47 = new JLabel("均匀间隔时的吸收能量：");
+		panel.add(label_47, "cell 0 2,alignx trailing");
+		
+		uniform_Objective1 = new JTextField();
+		panel.add(uniform_Objective1, "cell 1 2,alignx left,aligny center");
+		uniform_Objective1.setColumns(10);
+		
+		JLabel label_48 = new JLabel("均匀间隔时的利用率：");
+		panel.add(label_48, "cell 2 2,alignx trailing");
+		
+		uniform_use_rate = new JTextField();
+		panel.add(uniform_use_rate, "cell 3 2,alignx left,aligny center");
+		uniform_use_rate.setColumns(10);
+		
+		objective2 = new JTextField();
+		objective2.setColumns(10);
+		panel.add(objective2, "cell 1 0,alignx left,aligny center");
+		
+		objective1 = new JTextField();
+		objective1.setColumns(10);
+		panel.add(objective1, "cell 1 1,alignx left,aligny center");
 		panel1112.setLayout(gl_panel1112);
 		GroupLayout gl_panel111 = new GroupLayout(panel111);
 		gl_panel111.setHorizontalGroup(
@@ -535,8 +592,8 @@ public class GUI {
 		bus_issues_button.addActionListener(new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				String name = "问题介绍";
-				String issusImagePath = busTimeissus1;
-				issusActionPerformed(evt,name,issusImagePath,1.2);
+				String issusImagePath = youhaozhanshi;
+				issusActionPerformed(evt,name,issusImagePath,1);
 			}
 		});
 		
@@ -697,7 +754,7 @@ public class GUI {
 		panel_3.add(diedaishu, "cell 0 4,alignx left,aligny center");
 		panel_3.add(label_16, "cell 0 0 3 1,alignx center,aligny center");
 		
-		JLabel label_17 = new JLabel("迭代数");
+		JLabel label_17 = new JLabel("迭代次数");
 		panel_3.add(label_17, "cell 2 4,alignx left,aligny center");
 		
 		JLabel label_11 = new JLabel("模型参数");
@@ -712,7 +769,7 @@ public class GUI {
 		shoumobancheshijian.setText("990");
 		shoumobancheshijian.setColumns(10);
 		
-		JLabel label_13 = new JLabel("首末班车的发车时间间隔(分钟)");
+		JLabel label_13 = new JLabel("首末趟次的时间间隔(分钟)");
 		panel_2.setLayout(new MigLayout("", "[66px][18px][168px]", "[50px][50px][50px][50px][50px][50px]"));
 		panel_2.add(label_11, "cell 0 0 3 1,alignx center,aligny center");
 		panel_2.add(fachebanci, "cell 0 1,alignx left,aligny center");
@@ -725,7 +782,7 @@ public class GUI {
 		min_fachejiange.setColumns(10);
 		panel_2.add(min_fachejiange, "cell 0 3,alignx left,aligny center");
 		
-		JLabel label_15 = new JLabel("最小发车间隔(分钟)");
+		JLabel label_15 = new JLabel("最小发车时间间隔(分钟)");
 		panel_2.add(label_15, "cell 2 3,alignx left,aligny center");
 		
 		max_fachejiange = new JTextField();
@@ -733,7 +790,7 @@ public class GUI {
 		max_fachejiange.setColumns(10);
 		panel_2.add(max_fachejiange, "cell 0 4,alignx left,aligny center");
 		
-		JLabel lblNewLabel_2 = new JLabel("最大发车间隔(分钟)");
+		JLabel lblNewLabel_2 = new JLabel("最大发车时间间隔(分钟)");
 		panel_2.add(lblNewLabel_2, "cell 2 4,alignx left,aligny center");
 		
 		ranyoujiage = new JTextField();
@@ -753,7 +810,7 @@ public class GUI {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				String name = "问题介绍";
 				String issusImagePath = busTimeissus1;
-				issusActionPerformed(evt,name,issusImagePath,1.2);
+				issusActionPerformed(evt,name,issusImagePath,1);
 			}
 		});
 		
@@ -766,7 +823,7 @@ public class GUI {
 			}
 		});
 		
-		JButton buspassenger_distance_button = new JButton("导入客流OD");
+		JButton buspassenger_distance_button = new JButton("导入OD客流");
 		buspassenger_distance_button.addActionListener(new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				buttonOfBusDistance2(evt);
@@ -906,7 +963,7 @@ public class GUI {
 		
 		JLabel label_33 = new JLabel("算法参数");
 		
-		JLabel label_34 = new JLabel("迭代数");
+		JLabel label_34 = new JLabel("迭代次数");
 		panel_6.setLayout(new MigLayout("", "[66px][18px][168px]", "[50px][50px][50px][50px]"));
 		panel_6.add(zhongqunguimo2, "cell 0 1,growx,aligny center");
 		panel_6.add(label_30, "cell 2 1,alignx left,aligny center");
@@ -930,25 +987,25 @@ public class GUI {
 		shoumobancheshijian2.setText("300");
 		shoumobancheshijian2.setColumns(10);
 		
-		JLabel label_26 = new JLabel("首末班车的发车时间间隔(分钟)");
+		JLabel label_26 = new JLabel("首末趟次的时间间隔(分钟)");
 		
 		min_fachejiange2 = new JTextField();
 		min_fachejiange2.setText("8");
 		min_fachejiange2.setColumns(10);
 		
-		JLabel label_27 = new JLabel("最小发车间隔(分钟)");
+		JLabel label_27 = new JLabel("最小发车时间间隔(分钟)");
 		
 		max_fachejiange2 = new JTextField();
 		max_fachejiange2.setText("20");
 		max_fachejiange2.setColumns(10);
 		
-		JLabel label_28 = new JLabel("最大发车间隔(分钟)");
+		JLabel label_28 = new JLabel("最大发车时间间隔(分钟)");
 		
 		ranyoujiage2 = new JTextField();
 		ranyoujiage2.setText("65");
 		ranyoujiage2.setColumns(10);
 		
-		JLabel label_29 = new JLabel("标准单趟耗时(分钟)");
+		JLabel label_29 = new JLabel("标准趟次耗时(分钟)");
 		panel_5.setLayout(new MigLayout("", "[66px][18px][168px]", "[50px][50px][50px][50px][50px][50px]"));
 		panel_5.add(fachebanci2, "cell 0 1,alignx left,aligny center");
 		panel_5.add(label_25, "cell 2 1,alignx left,aligny center");
@@ -962,6 +1019,599 @@ public class GUI {
 		panel_5.add(label_29, "cell 2 5,alignx left,aligny center");
 		panel_5.add(label_24, "cell 0 0 3 1,alignx center,aligny center");
 		panel_4.setLayout(gl_panel_4);
+		
+		JPanel panel_12 = new JPanel();
+		tabbedPane_5.addTab("串车优化", null, panel_12, null);
+		
+		JButton chuancheissue1 = new JButton("问题介绍");
+		chuancheissue1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String name = "问题介绍";
+				String issusImagePath = chuancheissueImage1;
+				issusActionPerformed(e,name,issusImagePath,1);
+			}
+		});
+		
+		JButton chuancheissue2 = new JButton("算法介绍");
+		chuancheissue2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String name = "算法介绍";
+				String issusImagePath = busTimeissus1;
+				issusActionPerformed(e
+						,name,issusImagePath,1);
+			}
+		});
+		
+		JButton chuanchejihua = new JButton("导入到达各站的计划时间");
+		chuanchejihua.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonofchuanchejihua(e);
+			}
+		});
+		
+		JButton chuancheshiji = new JButton("导入到达各站的实际时间");
+		chuancheshiji.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonofchuancheshiji(e);
+			}
+		});
+		
+		JButton chuanchestart = new JButton("开始");
+		chuanchestart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonofchuanchestart(e);
+			}
+		});
+		
+		JButton chuancheclean = new JButton("清空文本区");
+		chuancheclean.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				chuanchewaite1.setText("");
+				chuanchewaite2.setText("");
+			}
+		});
+		
+		JPanel panel_13 = new JPanel();
+		
+		JButton chuanchedaodalv = new JButton("导入各站的乘客到达率");
+		chuanchedaodalv.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonofchuanchechengkedaoda(e);
+			}
+		});
+		
+		JLabel label_52 = new JLabel("优化前的乘客等待时间(分钟)：");
+		
+		JLabel label_53 = new JLabel("优化后的乘客等待时间(分钟)：");
+		
+		chuanchewaite1 = new JTextField();
+		chuanchewaite1.setColumns(10);
+		
+		chuanchewaite2 = new JTextField();
+		chuanchewaite2.setColumns(10);
+		
+		JPanel panel_14 = new JPanel();
+		GroupLayout gl_panel_12 = new GroupLayout(panel_12);
+		gl_panel_12.setHorizontalGroup(
+			gl_panel_12.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_12.createSequentialGroup()
+					.addGap(41)
+					.addGroup(gl_panel_12.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_12.createSequentialGroup()
+							.addGap(25)
+							.addGroup(gl_panel_12.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_panel_12.createParallelGroup(Alignment.LEADING, false)
+									.addComponent(chuancheshiji, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(chuanchejihua, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(chuanchedaodalv, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+								.addGroup(gl_panel_12.createSequentialGroup()
+									.addGap(56)
+									.addComponent(chuanchestart))))
+						.addComponent(panel_13, GroupLayout.PREFERRED_SIZE, 292, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_panel_12.createSequentialGroup()
+							.addComponent(chuancheissue1)
+							.addGap(47)
+							.addComponent(chuancheissue2)))
+					.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addGroup(gl_panel_12.createParallelGroup(Alignment.TRAILING)
+						.addComponent(chuancheclean)
+						.addGroup(gl_panel_12.createSequentialGroup()
+							.addComponent(label_52)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(chuanchewaite1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(32)
+							.addComponent(label_53)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(chuanchewaite2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(panel_14, GroupLayout.PREFERRED_SIZE, 541, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap(67, Short.MAX_VALUE))
+		);
+		gl_panel_12.setVerticalGroup(
+			gl_panel_12.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_12.createSequentialGroup()
+					.addGroup(gl_panel_12.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_12.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(chuancheclean)
+							.addGap(29)
+							.addGroup(gl_panel_12.createParallelGroup(Alignment.TRAILING)
+								.addGroup(gl_panel_12.createParallelGroup(Alignment.BASELINE)
+									.addComponent(label_53)
+									.addComponent(chuanchewaite2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addGroup(gl_panel_12.createParallelGroup(Alignment.BASELINE)
+									.addComponent(label_52)
+									.addComponent(chuanchewaite1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+							.addGap(8)
+							.addComponent(panel_14, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel_12.createSequentialGroup()
+							.addGap(23)
+							.addGroup(gl_panel_12.createParallelGroup(Alignment.BASELINE)
+								.addComponent(chuancheissue1)
+								.addComponent(chuancheissue2))
+							.addGap(46)
+							.addGroup(gl_panel_12.createParallelGroup(Alignment.LEADING)
+								.addComponent(panel_13, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
+								.addGroup(gl_panel_12.createSequentialGroup()
+									.addGap(190)
+									.addComponent(chuanchejihua)
+									.addGap(18)
+									.addComponent(chuancheshiji)))
+							.addGap(18)
+							.addComponent(chuanchedaodalv)
+							.addGap(30)
+							.addComponent(chuanchestart)))
+					.addContainerGap(54, Short.MAX_VALUE))
+		);
+		chuancheresultImage = new ImageIcon(chuanchezhanshiImage);
+		Image imgchuanche = chuancheresultImage.getImage();
+		imgchuanche = imgchuanche.getScaledInstance(500,400, Image.SCALE_DEFAULT);
+		chuancheresultImage.setImage(imgchuanche);
+		chuanchezhanshilabel = new JLabel(chuancheresultImage);
+		chuanchezhanshilabel.setIcon(chuancheresultImage);
+		GroupLayout gl_panel_14 = new GroupLayout(panel_14);
+		gl_panel_14.setHorizontalGroup(
+			gl_panel_14.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_14.createSequentialGroup()
+					.addComponent(chuanchezhanshilabel)
+					.addContainerGap(557, Short.MAX_VALUE))
+		);
+		gl_panel_14.setVerticalGroup(
+			gl_panel_14.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_14.createSequentialGroup()
+					.addComponent(chuanchezhanshilabel)
+					.addContainerGap(380, Short.MAX_VALUE))
+		);
+		panel_14.setLayout(gl_panel_14);
+		
+		JLabel label_49 = new JLabel("模型参数");
+		
+		chuanchezongtangci = new JTextField();
+		chuanchezongtangci.setText("5");
+		chuanchezongtangci.setColumns(10);
+		
+		chuanchequjiantangci = new JTextField();
+		chuanchequjiantangci.setText("2");
+		chuanchequjiantangci.setColumns(10);
+		
+		JLabel label_50 = new JLabel("总发车趟次数");
+		
+		JLabel label_51 = new JLabel("区间车发车趟次数");
+		GroupLayout gl_panel_13 = new GroupLayout(panel_13);
+		gl_panel_13.setHorizontalGroup(
+			gl_panel_13.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_13.createSequentialGroup()
+					.addGroup(gl_panel_13.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_13.createSequentialGroup()
+							.addGap(101)
+							.addComponent(label_49))
+						.addGroup(gl_panel_13.createSequentialGroup()
+							.addGap(26)
+							.addGroup(gl_panel_13.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_panel_13.createSequentialGroup()
+									.addComponent(chuanchequjiantangci, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addGap(18)
+									.addComponent(label_51))
+								.addGroup(gl_panel_13.createSequentialGroup()
+									.addComponent(chuanchezongtangci, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addGap(18)
+									.addComponent(label_50)))))
+					.addContainerGap(128, Short.MAX_VALUE))
+		);
+		gl_panel_13.setVerticalGroup(
+			gl_panel_13.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_13.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(label_49)
+					.addGap(18)
+					.addGroup(gl_panel_13.createParallelGroup(Alignment.BASELINE)
+						.addComponent(chuanchezongtangci, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_50))
+					.addGap(18)
+					.addGroup(gl_panel_13.createParallelGroup(Alignment.BASELINE)
+						.addComponent(chuanchequjiantangci, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_51))
+					.addContainerGap(113, Short.MAX_VALUE))
+		);
+		panel_13.setLayout(gl_panel_13);
+		panel_12.setLayout(gl_panel_12);
+		
+		JPanel panel_15 = new JPanel();
+		tabbedPane_5.addTab("双向客流量优化", null, panel_15, null);
+		
+		JButton shuangxiangissue1 = new JButton("问题介绍");
+		shuangxiangissue1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String name = "问题介绍";
+				String issusImagePath = shuangxiangissueImage1;
+				issusActionPerformed(e,name,issusImagePath,1);
+			}
+		});
+		
+		JButton shuangxiangissue2 = new JButton("算法介绍");
+		shuangxiangissue2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String name = "算法介绍";
+				String issusImagePath = shuangxiangissueImage1;
+				issusActionPerformed(e,name,issusImagePath,1);
+			}
+		});
+		
+		JPanel panel_16 = new JPanel();
+		
+		JPanel panel_17 = new JPanel();
+		
+		JButton shuangxiangOD = new JButton("导入双向OD客流");
+		shuangxiangOD.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonofshuangxiangOD(e);
+			}
+		});
+		
+		JButton shuangxiangzhanjian = new JButton("导入双向站间旅行时间");
+		shuangxiangzhanjian.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonofshuangxiangzhanjian(e);
+			}
+		});
+		
+		JButton shuangxiangstart = new JButton("开始");
+		shuangxiangstart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonofshuangxiangstart(e);
+			}
+		});
+		
+		JButton shuangxiangclean = new JButton("清空文本区");
+		shuangxiangclean.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				shuangxiangkeliu.setText("");
+				shangxingpeiche.setText("");
+				xiaxingpeiche.setText("");
+			}
+		});
+		
+		JLabel label_67 = new JLabel("公交线路总客流量(人次)：");
+		
+		JLabel label_68 = new JLabel("上行场站所需配车数(辆)：");
+		
+		JLabel label_69 = new JLabel("下行场站所需配车数(辆)：");
+		
+		shuangxiangkeliu = new JTextField();
+		shuangxiangkeliu.setColumns(10);
+		
+		shangxingpeiche = new JTextField();
+		shangxingpeiche.setColumns(10);
+		
+		xiaxingpeiche = new JTextField();
+		xiaxingpeiche.setText("");
+		xiaxingpeiche.setColumns(10);
+		
+		JPanel panel_18 = new JPanel();
+		GroupLayout gl_panel_15 = new GroupLayout(panel_15);
+		gl_panel_15.setHorizontalGroup(
+			gl_panel_15.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_15.createSequentialGroup()
+					.addGap(43)
+					.addGroup(gl_panel_15.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_15.createSequentialGroup()
+							.addComponent(shuangxiangissue1)
+							.addGap(45)
+							.addComponent(shuangxiangissue2))
+						.addComponent(panel_17, GroupLayout.PREFERRED_SIZE, 249, GroupLayout.PREFERRED_SIZE)
+						.addComponent(panel_16, GroupLayout.PREFERRED_SIZE, 293, GroupLayout.PREFERRED_SIZE))
+					.addGroup(gl_panel_15.createParallelGroup(Alignment.LEADING, false)
+						.addGroup(gl_panel_15.createSequentialGroup()
+							.addGap(26)
+							.addGroup(gl_panel_15.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_panel_15.createSequentialGroup()
+									.addComponent(shuangxiangOD)
+									.addGap(46)
+									.addComponent(shuangxiangzhanjian)
+									.addGap(31)
+									.addComponent(shuangxiangstart)
+									.addGap(37)
+									.addComponent(shuangxiangclean))
+								.addGroup(gl_panel_15.createSequentialGroup()
+									.addGap(135)
+									.addGroup(gl_panel_15.createParallelGroup(Alignment.LEADING)
+										.addGroup(gl_panel_15.createSequentialGroup()
+											.addComponent(label_69)
+											.addPreferredGap(ComponentPlacement.UNRELATED)
+											.addComponent(xiaxingpeiche, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+										.addGroup(gl_panel_15.createSequentialGroup()
+											.addComponent(label_68)
+											.addPreferredGap(ComponentPlacement.UNRELATED)
+											.addComponent(shangxingpeiche, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+										.addGroup(gl_panel_15.createSequentialGroup()
+											.addComponent(label_67)
+											.addPreferredGap(ComponentPlacement.UNRELATED)
+											.addComponent(shuangxiangkeliu, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
+							.addGap(76))
+						.addGroup(Alignment.TRAILING, gl_panel_15.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+							.addComponent(panel_18, GroupLayout.PREFERRED_SIZE, 565, GroupLayout.PREFERRED_SIZE)
+							.addGap(21))))
+		);
+		gl_panel_15.setVerticalGroup(
+			gl_panel_15.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_15.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_panel_15.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangissue1)
+						.addComponent(shuangxiangissue2)
+						.addComponent(shuangxiangOD)
+						.addComponent(shuangxiangzhanjian)
+						.addComponent(shuangxiangstart)
+						.addComponent(shuangxiangclean))
+					.addGroup(gl_panel_15.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_15.createSequentialGroup()
+							.addGap(27)
+							.addComponent(panel_16, GroupLayout.PREFERRED_SIZE, 261, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(panel_17, GroupLayout.PREFERRED_SIZE, 179, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel_15.createSequentialGroup()
+							.addGap(18)
+							.addGroup(gl_panel_15.createParallelGroup(Alignment.BASELINE)
+								.addComponent(label_67)
+								.addComponent(shuangxiangkeliu, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(gl_panel_15.createParallelGroup(Alignment.BASELINE)
+								.addComponent(label_68)
+								.addComponent(shangxingpeiche, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(gl_panel_15.createParallelGroup(Alignment.BASELINE)
+								.addComponent(label_69)
+								.addComponent(xiaxingpeiche, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(panel_18, GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)))
+					.addContainerGap())
+		);
+		shuangxiangresultImage = new ImageIcon(shuangxiangshouye);
+		Image shuangxiangimg = shuangxiangresultImage.getImage();
+		shuangxiangimg = shuangxiangimg.getScaledInstance(530,350, Image.SCALE_DEFAULT);
+		shuangxiangresultImage.setImage(shuangxiangimg);
+		shuangxiangzhanshi = new JLabel(shuangxiangresultImage);
+		shuangxiangzhanshi.setIcon(shuangxiangresultImage);
+		GroupLayout gl_panel_18 = new GroupLayout(panel_18);
+		gl_panel_18.setHorizontalGroup(
+			gl_panel_18.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_18.createSequentialGroup()
+					.addComponent(shuangxiangzhanshi)
+					.addContainerGap(588, Short.MAX_VALUE))
+		);
+		gl_panel_18.setVerticalGroup(
+			gl_panel_18.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_18.createSequentialGroup()
+					.addComponent(shuangxiangzhanshi)
+					.addContainerGap(363, Short.MAX_VALUE))
+		);
+		panel_18.setLayout(gl_panel_18);
+		
+		JLabel label_62 = new JLabel("算法参数");
+		
+		shuangxiangzhongqun = new JTextField();
+		shuangxiangzhongqun.setText("200");
+		shuangxiangzhongqun.setColumns(10);
+		
+		JLabel label_63 = new JLabel("种群规模");
+		
+		shuangxiangjiaocha = new JTextField();
+		shuangxiangjiaocha.setText("0.8");
+		shuangxiangjiaocha.setColumns(10);
+		
+		JLabel label_64 = new JLabel("交叉概率");
+		
+		shuangxiangbianyi = new JTextField();
+		shuangxiangbianyi.setText("0.3");
+		shuangxiangbianyi.setColumns(10);
+		
+		JLabel label_65 = new JLabel("变异概率");
+		
+		shuangxiangdiedai = new JTextField();
+		shuangxiangdiedai.setText("50");
+		shuangxiangdiedai.setColumns(10);
+		
+		JLabel label_66 = new JLabel("迭代次数");
+		GroupLayout gl_panel_17 = new GroupLayout(panel_17);
+		gl_panel_17.setHorizontalGroup(
+			gl_panel_17.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_17.createSequentialGroup()
+					.addGroup(gl_panel_17.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_17.createSequentialGroup()
+							.addGap(77)
+							.addComponent(label_62))
+						.addGroup(gl_panel_17.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shuangxiangzhongqun, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_63))
+						.addGroup(gl_panel_17.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shuangxiangjiaocha, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_64))
+						.addGroup(gl_panel_17.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shuangxiangbianyi, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_65))
+						.addGroup(gl_panel_17.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shuangxiangdiedai, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_66)))
+					.addContainerGap(101, Short.MAX_VALUE))
+		);
+		gl_panel_17.setVerticalGroup(
+			gl_panel_17.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_17.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(label_62)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_17.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangzhongqun, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_63))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_17.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangjiaocha, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_64))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_17.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangbianyi, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_65))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_17.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangdiedai, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_66))
+					.addContainerGap(30, Short.MAX_VALUE))
+		);
+		panel_17.setLayout(gl_panel_17);
+		
+		JLabel label_54 = new JLabel("模型参数");
+		
+		shuangxiangtangci = new JTextField();
+		shuangxiangtangci.setText("70");
+		shuangxiangtangci.setColumns(10);
+		
+		shangxingshouban = new JTextField();
+		shangxingshouban.setText("0");
+		shangxingshouban.setColumns(10);
+		
+		shangxingmoban = new JTextField();
+		shangxingmoban.setText("500");
+		shangxingmoban.setColumns(10);
+		
+		xiaxingshouban = new JTextField();
+		xiaxingshouban.setText("20");
+		xiaxingshouban.setColumns(10);
+		
+		xiaxingmoban = new JTextField();
+		xiaxingmoban.setText("480");
+		xiaxingmoban.setColumns(10);
+		
+		shuangxiangzuixiao = new JTextField();
+		shuangxiangzuixiao.setText("8");
+		shuangxiangzuixiao.setColumns(10);
+		
+		shuangxiangzuida = new JTextField();
+		shuangxiangzuida.setText("20");
+		shuangxiangzuida.setColumns(10);
+		
+		JLabel label_55 = new JLabel("公交线路双向发车趟次数");
+		
+		JLabel label_56 = new JLabel("上行方向的首班车发车时间");
+		
+		JLabel label_57 = new JLabel("上行方向的末班车发车时间");
+		
+		JLabel label_58 = new JLabel("下行方向的首班车发车时间");
+		
+		JLabel label_59 = new JLabel("下行方向的末班车发车时间");
+		
+		JLabel label_60 = new JLabel("最小发车时间间隔(分钟)");
+		
+		JLabel label_61 = new JLabel("最大发车时间间隔(分钟)");
+		GroupLayout gl_panel_16 = new GroupLayout(panel_16);
+		gl_panel_16.setHorizontalGroup(
+			gl_panel_16.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_16.createSequentialGroup()
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addGap(86)
+							.addComponent(label_54))
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shuangxiangtangci, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_55))
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shangxingshouban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_56))
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shangxingmoban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_57))
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(xiaxingshouban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_58))
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(xiaxingmoban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_59))
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shuangxiangzuixiao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_60))
+						.addGroup(gl_panel_16.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(shuangxiangzuida, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(label_61)))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+		);
+		gl_panel_16.setVerticalGroup(
+			gl_panel_16.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_16.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(label_54)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangtangci, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_55))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shangxingshouban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_56))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shangxingmoban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_57))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.BASELINE)
+						.addComponent(xiaxingshouban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_58))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.BASELINE)
+						.addComponent(xiaxingmoban, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_59))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangzuixiao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_60))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel_16.createParallelGroup(Alignment.BASELINE)
+						.addComponent(shuangxiangzuida, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_61))
+					.addContainerGap(19, Short.MAX_VALUE))
+		);
+		panel_16.setLayout(gl_panel_16);
+		panel_15.setLayout(gl_panel_15);
 		panel12.setLayout(gl_panel12);
 		
 		JPanel panel13 = new JPanel();
@@ -999,17 +1649,29 @@ public class GUI {
 		);
 		
 		JPanel panel_8 = new JPanel();
-		tabbedPane_6.addTab("单车优化", null, panel_8, null);
+		tabbedPane_6.addTab("单车调度优化", null, panel_8, null);
 		
 		JButton dancheissue1 = new JButton("问题介绍");
+		dancheissue1.addActionListener(new ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				String name = "问题介绍";
+				String issusImagePath = dancheissueimage1;
+				issusActionPerformed(evt,name,issusImagePath,5);
+			}
+		});
 		
 		JButton dancheissue2 = new JButton("算法介绍");
-		
-		JPanel panel_9 = new JPanel();
+		dancheissue2.addActionListener(new ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				String name = "算法介绍";
+				String issusImagePath = dancheissueimage2;
+				issusActionPerformed(evt,name,issusImagePath,4.3);
+			}
+		});
 		
 		JPanel panel_10 = new JPanel();
 		
-		JButton banyunweizhi = new JButton("导入搬运位置列表");
+		JButton banyunweizhi = new JButton("导入自行车位置列表");
 		banyunweizhi.addActionListener(new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				buttonOfbanyunweizhi(evt,"node");
@@ -1043,6 +1705,44 @@ public class GUI {
 		banyunfeiyong.setColumns(10);
 		
 		JPanel panel_11 = new JPanel();
+		
+		JPanel panel_9 = new JPanel();
+		
+		JLabel label_23 = new JLabel("模型参数");
+		
+		Tmax = new JTextField();
+		Tmax.setText("1000");
+		Tmax.setColumns(10);
+		
+		JLabel label_35 = new JLabel("最大搬运时间");
+		
+		Qmax = new JTextField();
+		Qmax.setText("5");
+		Qmax.setColumns(10);
+		
+		JLabel label_36 = new JLabel("搬运车容量");
+		
+		banyuncheC = new JTextField();
+		banyuncheC.setText("10");
+		banyuncheC.setColumns(10);
+		
+		JLabel label_37 = new JLabel("搬运车单价");
+		
+		feiyongzhuanhuan = new JTextField();
+		feiyongzhuanhuan.setText("0.3");
+		feiyongzhuanhuan.setColumns(10);
+		
+		JLabel label_38 = new JLabel("路径费用转换系数");
+		panel_9.setLayout(new MigLayout("", "[66px][18px][168px]", "[60px][60px][60px][60px][60px]"));
+		panel_9.add(Tmax, "cell 0 1,alignx left,aligny center");
+		panel_9.add(Qmax, "cell 0 2,alignx left,aligny center");
+		panel_9.add(banyuncheC, "cell 0 3,alignx left,aligny center");
+		panel_9.add(feiyongzhuanhuan, "cell 0 4,alignx left,aligny center");
+		panel_9.add(label_38, "cell 2 4,alignx left,aligny center");
+		panel_9.add(label_36, "cell 2 2,alignx left,aligny center");
+		panel_9.add(label_35, "cell 2 1,alignx left,aligny center");
+		panel_9.add(label_37, "cell 2 3,alignx left,aligny center");
+		panel_9.add(label_23, "cell 0 0 3 1,alignx center,aligny center");
 		GroupLayout gl_panel_8 = new GroupLayout(panel_8);
 		gl_panel_8.setHorizontalGroup(
 			gl_panel_8.createParallelGroup(Alignment.LEADING)
@@ -1062,9 +1762,10 @@ public class GUI {
 							.addGap(52)
 							.addComponent(dancheclean))
 						.addGroup(gl_panel_8.createSequentialGroup()
-							.addGroup(gl_panel_8.createParallelGroup(Alignment.TRAILING)
-								.addComponent(panel_9, GroupLayout.PREFERRED_SIZE, 254, GroupLayout.PREFERRED_SIZE)
-								.addComponent(panel_10, GroupLayout.PREFERRED_SIZE, 255, GroupLayout.PREFERRED_SIZE))
+							.addGroup(gl_panel_8.createParallelGroup(Alignment.LEADING)
+								.addComponent(panel_10, GroupLayout.PREFERRED_SIZE, 255, GroupLayout.PREFERRED_SIZE)
+								.addComponent(panel_9, GroupLayout.PREFERRED_SIZE, 254, GroupLayout.PREFERRED_SIZE))
+							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_panel_8.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_panel_8.createSequentialGroup()
 									.addGap(63)
@@ -1101,14 +1802,14 @@ public class GUI {
 								.addComponent(banyunfeiyong, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addGap(18)
 							.addComponent(panel_11, GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE))
-						.addGroup(gl_panel_8.createSequentialGroup()
+						.addGroup(Alignment.TRAILING, gl_panel_8.createSequentialGroup()
 							.addGap(18)
-							.addComponent(panel_10, GroupLayout.PREFERRED_SIZE, 255, GroupLayout.PREFERRED_SIZE)
-							.addGap(18)
-							.addComponent(panel_9, GroupLayout.PREFERRED_SIZE, 182, GroupLayout.PREFERRED_SIZE)))
+							.addComponent(panel_9, GroupLayout.PREFERRED_SIZE, 182, GroupLayout.PREFERRED_SIZE)
+							.addGap(26)
+							.addComponent(panel_10, GroupLayout.PREFERRED_SIZE, 255, GroupLayout.PREFERRED_SIZE)))
 					.addContainerGap())
 		);
-		dancheresultImage = new ImageIcon(startIga);
+		dancheresultImage = new ImageIcon(danchezhanshiImage);
 		Image img1 = dancheresultImage.getImage();
         img1 = img1.getScaledInstance(530,350, Image.SCALE_DEFAULT);
         dancheresultImage.setImage(img1);
@@ -1117,19 +1818,15 @@ public class GUI {
 		GroupLayout gl_panel_11 = new GroupLayout(panel_11);
 		gl_panel_11.setHorizontalGroup(
 			gl_panel_11.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel_11.createSequentialGroup()
-					.addComponent(danchezhanshi)
-					.addContainerGap(587, Short.MAX_VALUE))
+				.addComponent(danchezhanshi, GroupLayout.DEFAULT_SIZE, 607, Short.MAX_VALUE)
 		);
 		gl_panel_11.setVerticalGroup(
 			gl_panel_11.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel_11.createSequentialGroup()
-					.addComponent(danchezhanshi)
-					.addContainerGap(386, Short.MAX_VALUE))
+				.addComponent(danchezhanshi, GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
 		);
 		panel_11.setLayout(gl_panel_11);
 		
-		JLabel label_39 = new JLabel("模型参数");
+		JLabel label_39 = new JLabel("算法参数");
 		
 		del_rate = new JTextField();
 		del_rate.setText("0.2");
@@ -1147,7 +1844,7 @@ public class GUI {
 		segments.setText("10");
 		segments.setColumns(10);
 		
-		JLabel label_41 = new JLabel("每层迭代次数");
+		JLabel label_41 = new JLabel("每层更新次数");
 		
 		gengxinr = new JTextField();
 		gengxinr.setText("0.1");
@@ -1167,7 +1864,7 @@ public class GUI {
 		
 		JLabel label_44 = new JLabel("初始温度值");
 		panel_10.setLayout(new MigLayout("", "[66px][18px][168px]", "[60px][60px][60px][60px][60px][60px][60px]"));
-		panel_10.add(label_39, "cell 0 0 3 1,alignx center,aligny top");
+		panel_10.add(label_39, "cell 0 0 3 1,alignx center,aligny center");
 		panel_10.add(iterations, "cell 0 2,alignx left,aligny center");
 		panel_10.add(segments, "cell 0 3,alignx left,aligny center");
 		panel_10.add(del_rate, "cell 0 1,alignx left,aligny center");
@@ -1180,42 +1877,6 @@ public class GUI {
 		panel_10.add(label_41, "cell 2 3,alignx left,aligny center");
 		panel_10.add(label_40, "cell 2 2,alignx left,aligny center");
 		panel_10.add(lblNewLabel_3, "cell 2 1,alignx left,aligny center");
-		
-		JLabel label_23 = new JLabel("算法参数");
-		
-		Tmax = new JTextField();
-		Tmax.setText("1000");
-		Tmax.setColumns(10);
-		
-		JLabel label_35 = new JLabel("最大搬运时间");
-		
-		Qmax = new JTextField();
-		Qmax.setText("5");
-		Qmax.setColumns(10);
-		
-		JLabel label_36 = new JLabel("搬运车容量");
-		
-		banyuncheC = new JTextField();
-		banyuncheC.setText("10");
-		banyuncheC.setColumns(10);
-		
-		JLabel label_37 = new JLabel("搬运车单价");
-		
-		feiyongzhuanhuan = new JTextField();
-		feiyongzhuanhuan.setText("0.3");
-		feiyongzhuanhuan.setColumns(10);
-		
-		JLabel label_38 = new JLabel("路径费用转换系数");
-		panel_9.setLayout(new MigLayout("", "[66px][18px][168px]", "[60px][60px][60px][60px][60px]"));
-		panel_9.add(Tmax, "cell 0 1,alignx left,aligny center");
-		panel_9.add(Qmax, "cell 0 2,alignx left,aligny center");
-		panel_9.add(banyuncheC, "cell 0 3,alignx left,aligny center");
-		panel_9.add(feiyongzhuanhuan, "cell 0 4,alignx left,aligny center");
-		panel_9.add(label_38, "cell 2 4,alignx left,aligny center");
-		panel_9.add(label_36, "cell 2 2,alignx left,aligny center");
-		panel_9.add(label_35, "cell 2 1,alignx left,aligny center");
-		panel_9.add(label_37, "cell 2 3,alignx left,aligny center");
-		panel_9.add(label_23, "cell 0 0 3 1,alignx center,aligny top");
 		panel_8.setLayout(gl_panel_8);
 		panel21.setLayout(gl_panel21);
 		
@@ -1281,6 +1942,10 @@ public class GUI {
 
 	
 
+	
+
+	
+
 	protected void issusActionPerformed(java.awt.event.ActionEvent evt,
 			String name,String issusImagePath,double d) {
 		// TODO Auto-generated method stub
@@ -1339,6 +2004,8 @@ public class GUI {
 				String obj2 = "";
 				String obj3 = "";
 				String obj4 = "";
+				String obj5 = "";
+				String obj6 = "";
 				try {
 					//开始运行时间
 					long startTime = System.currentTimeMillis();
@@ -1349,14 +2016,19 @@ public class GUI {
 					System.out.println("运行时长为"+(endTime - startTime)/1000+"s");
 					//将大内存图转小
 					WriteImage.changeImage(igaImageName, resultIga);
-					obj1 = ReadResult.readFile("./result1.txt");
-					obj2 = ReadResult.readFile("./result2.txt");
-					obj3 = ReadResult.readFile("./result3.txt");
-					obj4 = ReadResult.readFile("./result4.txt");
+					obj1 = ReadResult.readFile("./IGAObjective1.txt");
+					obj2 = ReadResult.readFile("./IGAObjective2.txt");
+					obj3 = ReadResult.readFile("./IGAObjective3.txt");
+					obj4 = ReadResult.readFile("./IGAuse_rate.txt");
+					obj5 = ReadResult.readFile("./IGAUniform_Objective1.txt");
+					obj6 = ReadResult.readFile("./IGAUniform_use_rate.txt");
 					objective1.setText(obj1);
 					objective2.setText(obj2);
 					objective3.setText(obj3);
 					user_rate.setText(obj4);
+					uniform_Objective1.setText(obj5);
+					uniform_use_rate.setText(obj6);
+					
 					igaresultImage = new ImageIcon(resultIga);
 					Image img = igaresultImage.getImage();
 			        img = img.getScaledInstance((int) (igaresultImage.getIconWidth()/3.5),(int) (igaresultImage.getIconHeight()/3.5), Image.SCALE_DEFAULT);
@@ -1482,7 +2154,7 @@ public class GUI {
 					
 					busresultImage2 = new ImageIcon(resultBusPassangerTime);
 					Image img = busresultImage2.getImage();
-			        img = img.getScaledInstance(450,400, Image.SCALE_DEFAULT);
+			        img = img.getScaledInstance(450,450, Image.SCALE_DEFAULT);
 			        busresultImage2.setImage(img);
 			        startbus2.setIcon(busresultImage2);
 					//lblResultlabel = new JLabel(resultImage);
@@ -1550,6 +2222,133 @@ public class GUI {
 			        img = img.getScaledInstance(450,400, Image.SCALE_DEFAULT);
 			        dancheresultImage.setImage(img);
 			        danchezhanshi.setIcon(dancheresultImage);
+					//lblResultlabel = new JLabel(resultImage);
+				} catch (MatlabInvocationException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					jdg.dispose();
+				} 
+				jdg.dispose();
+				//IGAtext.append(out);
+			}
+		}.start();
+	}
+	
+	protected void buttonofchuanchestart(ActionEvent e) {
+		// TODO Auto-generated method stub
+		new Thread() {
+			public void run() {
+				JProgressBar bar = new JProgressBar(JProgressBar.HORIZONTAL);
+				bar.setStringPainted(false);
+				bar.setIndeterminate(true);
+				bar.setSize(new Dimension(300, 100));
+				bar.setForeground(Color.GREEN);
+				JDialog jdg = new JDialog();
+				jdg.setTitle("运算中，请稍候。。。");
+				jdg.setSize(new Dimension(300, 100));
+				jdg.setLocation(550, 260);
+				jdg.getContentPane().add(bar);
+				jdg.setResizable(false);
+
+				jdg.show(true);
+				int k = Integer.parseInt((String)chuanchezongtangci.getText());
+				int k1 = Integer.parseInt((String)chuanchequjiantangci.getText());
+				
+				String file1 = chuanchejihuashijian;
+				String file2 = chuancheshijishijian;
+				String file3 = chuanchechengkedaodalv;
+				
+				String obj = "";
+				
+				try {
+					//开始运行时间
+					long startTime = System.currentTimeMillis();
+					//运行matlab
+					BusMain.buschuanche(factory, proxy, k, k1, file1,file2,file3);
+					//结束运行时间
+					long endTime = System.currentTimeMillis();
+					System.out.println("运行时长为"+(endTime - startTime)/1000+"s");
+					//将大内存图转小
+					WriteImage.changeImage(chuancheResult, chuancheResult1);
+					obj = ReadResult.readFile("./chuancheWait1.txt");
+					chuanchewaite1.setText(obj);
+					obj = ReadResult.readFile("./chuancheWait2.txt");
+					chuanchewaite2.setText(obj);
+					
+					chuancheresultImage = new ImageIcon(chuancheResult1);
+					Image img = chuancheresultImage.getImage();
+			        img = img.getScaledInstance(450,400, Image.SCALE_DEFAULT);
+			        chuancheresultImage.setImage(img);
+			        chuanchezhanshilabel.setIcon(chuancheresultImage);
+					//lblResultlabel = new JLabel(resultImage);
+				} catch (MatlabInvocationException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					jdg.dispose();
+				} 
+				jdg.dispose();
+				//IGAtext.append(out);
+			}
+		}.start();
+	}
+	
+	protected void buttonofshuangxiangstart(ActionEvent e) {
+		// TODO Auto-generated method stub
+		new Thread() {
+			public void run() {
+				JProgressBar bar = new JProgressBar(JProgressBar.HORIZONTAL);
+				bar.setStringPainted(false);
+				bar.setIndeterminate(true);
+				bar.setSize(new Dimension(300, 100));
+				bar.setForeground(Color.GREEN);
+				JDialog jdg = new JDialog();
+				jdg.setTitle("运算中，请稍候。。。");
+				jdg.setSize(new Dimension(300, 100));
+				jdg.setLocation(550, 260);
+				jdg.getContentPane().add(bar);
+				jdg.setResizable(false);
+
+				jdg.show(true);
+				int k = Integer.parseInt((String)shuangxiangtangci.getText());
+				int ts1 = Integer.parseInt((String)shangxingshouban.getText());
+				int te1 = Integer.parseInt((String)shangxingmoban.getText());
+				int ts2 = Integer.parseInt((String)xiaxingshouban.getText());
+				int te2 = Integer.parseInt((String)xiaxingmoban.getText());
+				int hmin = Integer.parseInt((String)shuangxiangzuixiao.getText());
+				int hmax = Integer.parseInt((String)shuangxiangzuida.getText());
+				int popsize = Integer.parseInt((String)shuangxiangzhongqun.getText());
+				double pc = Double.parseDouble((String)shuangxiangjiaocha.getText());
+				double pm = Double.parseDouble((String)shuangxiangbianyi.getText());
+				int g = Integer.parseInt((String)shuangxiangdiedai.getText());
+				
+				
+				String file1 = shuangxiangODFile;
+				String file2 = shuangxiangzhanjianFile;
+				
+				String obj = "";
+				
+				try {
+					//开始运行时间
+					long startTime = System.currentTimeMillis();
+					//运行matlab
+					BusMain.busshuangxiang(factory, proxy, k, ts1, te1, ts2, te2, hmin, hmax, popsize, pc, pm, g, file1,file2);
+					//结束运行时间
+					long endTime = System.currentTimeMillis();
+					System.out.println("运行时长为"+(endTime - startTime)/1000+"s");
+					//将大内存图转小
+					WriteImage.changeImage(shuangxiangResult1, shuangxiangResult2);
+					obj = ReadResult.readFile("./shuangxiangGbest.txt");
+					shuangxiangkeliu.setText(obj);
+					obj = ReadResult.readFile("./shuangxiangBusNumber1.txt");
+					shangxingpeiche.setText(obj);
+					obj = ReadResult.readFile("./shuangxiangBusNumber2.txt");
+					xiaxingpeiche.setText(obj);
+					
+					shuangxiangresultImage = new ImageIcon(shuangxiangResult2);
+					Image img = shuangxiangresultImage.getImage();
+			        img = img.getScaledInstance(500,390, Image.SCALE_DEFAULT);
+			        shuangxiangresultImage.setImage(img);
+			        shuangxiangzhanshi.setIcon(shuangxiangresultImage);
 					//lblResultlabel = new JLabel(resultImage);
 				} catch (MatlabInvocationException | IOException e) {
 					// TODO Auto-generated catch block
@@ -1736,6 +2535,129 @@ public class GUI {
 			
 		}.start();
 	}
+	protected void buttonofchuanchejihua(ActionEvent e) {
+		// TODO Auto-generated method stub
+		new Thread() {
+			public void run() {
+				jFileChooser2.setDialogTitle("请选择文件");
+				jFileChooser2.setApproveButtonText("确定");
+				 
+				FileSystemView fsv = FileSystemView.getFileSystemView();
+				jFileChooser2.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				File dir = new File(projPath);
+				jFileChooser2.setCurrentDirectory(fsv.getParentDirectory(dir));
+				ExcelFileFilter excelFilter = new ExcelFileFilter(); //excel过滤器
+				jFileChooser2.addChoosableFileFilter(excelFilter);
+				jFileChooser2.setFileFilter(excelFilter);
+				if (JFileChooser.APPROVE_OPTION == jFileChooser2
+						.showOpenDialog(null)) {
+					chuanchejihuashijian = jFileChooser2.getSelectedFile().getName();
+					System.out.println(chuanchejihuashijian);
+					
+				}
+			}
+			
+		}.start();
+	}
+	protected void buttonofchuancheshiji(ActionEvent e) {
+		// TODO Auto-generated method stub
+		new Thread() {
+			public void run() {
+				jFileChooser2.setDialogTitle("请选择文件");
+				jFileChooser2.setApproveButtonText("确定");
+				 
+				FileSystemView fsv = FileSystemView.getFileSystemView();
+				jFileChooser2.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				File dir = new File(projPath);
+				jFileChooser2.setCurrentDirectory(fsv.getParentDirectory(dir));
+				ExcelFileFilter excelFilter = new ExcelFileFilter(); //excel过滤器
+				jFileChooser2.addChoosableFileFilter(excelFilter);
+				jFileChooser2.setFileFilter(excelFilter);
+				if (JFileChooser.APPROVE_OPTION == jFileChooser2
+						.showOpenDialog(null)) {
+					chuancheshijishijian = jFileChooser2.getSelectedFile().getName();
+					System.out.println(chuancheshijishijian);
+					
+				}
+			}
+			
+		}.start();
+	}
+	protected void buttonofchuanchechengkedaoda(ActionEvent e) {
+		// TODO Auto-generated method stub
+		new Thread() {
+			public void run() {
+				jFileChooser2.setDialogTitle("请选择文件");
+				jFileChooser2.setApproveButtonText("确定");
+				 
+				FileSystemView fsv = FileSystemView.getFileSystemView();
+				jFileChooser2.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				File dir = new File(projPath);
+				jFileChooser2.setCurrentDirectory(fsv.getParentDirectory(dir));
+				ExcelFileFilter excelFilter = new ExcelFileFilter(); //excel过滤器
+				jFileChooser2.addChoosableFileFilter(excelFilter);
+				jFileChooser2.setFileFilter(excelFilter);
+				if (JFileChooser.APPROVE_OPTION == jFileChooser2
+						.showOpenDialog(null)) {
+					chuanchechengkedaodalv = jFileChooser2.getSelectedFile().getName();
+					System.out.println(chuanchechengkedaodalv);
+					
+				}
+			}
+			
+		}.start();
+	}
+	
+	protected void buttonofshuangxiangOD(ActionEvent e) {
+		// TODO Auto-generated method stub
+		new Thread() {
+			public void run() {
+				jFileChooser2.setDialogTitle("请选择文件");
+				jFileChooser2.setApproveButtonText("确定");
+				 
+				FileSystemView fsv = FileSystemView.getFileSystemView();
+				jFileChooser2.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				File dir = new File(projPath);
+				jFileChooser2.setCurrentDirectory(fsv.getParentDirectory(dir));
+				ExcelFileFilter excelFilter = new ExcelFileFilter(); //excel过滤器
+				jFileChooser2.addChoosableFileFilter(excelFilter);
+				jFileChooser2.setFileFilter(excelFilter);
+				if (JFileChooser.APPROVE_OPTION == jFileChooser2
+						.showOpenDialog(null)) {
+					shuangxiangODFile = jFileChooser2.getSelectedFile().getName();
+					System.out.println(shuangxiangODFile);
+					
+				}
+			}
+			
+		}.start();
+	}
+	
+	protected void buttonofshuangxiangzhanjian(ActionEvent e) {
+		// TODO Auto-generated method stub
+		new Thread() {
+			public void run() {
+				jFileChooser2.setDialogTitle("请选择文件");
+				jFileChooser2.setApproveButtonText("确定");
+				 
+				FileSystemView fsv = FileSystemView.getFileSystemView();
+				jFileChooser2.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				File dir = new File(projPath);
+				jFileChooser2.setCurrentDirectory(fsv.getParentDirectory(dir));
+				ExcelFileFilter excelFilter = new ExcelFileFilter(); //excel过滤器
+				jFileChooser2.addChoosableFileFilter(excelFilter);
+				jFileChooser2.setFileFilter(excelFilter);
+				if (JFileChooser.APPROVE_OPTION == jFileChooser2
+						.showOpenDialog(null)) {
+					shuangxiangzhanjianFile = jFileChooser2.getSelectedFile().getName();
+					System.out.println(shuangxiangzhanjianFile);
+					
+				}
+			}
+			
+		}.start();
+	}
+	
 	class ExcelFileFilter extends FileFilter {  
 		public String getDescription() {  
 			return "*.xls;*.xlsx;*.mat";  
